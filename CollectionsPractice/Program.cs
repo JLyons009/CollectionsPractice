@@ -10,16 +10,12 @@ namespace CollectionsPractice
     {
         static void Main(string[] args)
         {
-            List<Student> students = new List<Student>
+            HashSet<Student> students = new HashSet<Student>
             {
                 new Student() {Name = "Tormund", GradeLevel = 3},
                 new Student() {Name = "Ygritte", GradeLevel = 3},
                 new Student() {Name = "Tormund", GradeLevel = 2},
             };
-
-            SchoolRoll schoolRoll = new SchoolRoll();
-            schoolRoll.AddStudents(students);
-            schoolRoll.AddStudents(students);
 
             foreach (Student student in schoolRoll.Students)
             {
