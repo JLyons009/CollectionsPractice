@@ -19,6 +19,15 @@ namespace CollectionsPractice
 
             students.Sort();
 
+            Student newStudent = new Student() { Name = "Jon", GradeLevel = 2 };
+
+            int index = students.BinarySearch(newStudent);
+
+            if(index < 0)
+            {
+                students.Insert(~index, newStudent);
+            }
+
             foreach (Student student in students)
             {
                 Console.WriteLine($"{student.Name} is in {student.GradeLevel}");
