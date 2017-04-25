@@ -17,18 +17,11 @@ namespace CollectionsPractice
                 new Student() {Name = "Tormund", GradeLevel = 2},
             };
 
-            students.Sort();
+            SchoolRoll schoolRoll = new SchoolRoll();
+            schoolRoll.AddStudents(students);
+            schoolRoll.AddStudents(students);
 
-            Student newStudent = new Student() { Name = "Jon", GradeLevel = 2 };
-
-            int index = students.BinarySearch(newStudent);
-
-            if(index < 0)
-            {
-                students.Insert(~index, newStudent);
-            }
-
-            foreach (Student student in students)
+            foreach (Student student in schoolRoll.Students)
             {
                 Console.WriteLine($"{student.Name} is in {student.GradeLevel}");
             }
